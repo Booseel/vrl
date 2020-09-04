@@ -4,12 +4,7 @@ import { Link } from "gatsby"
 const Button = (props) => (
     <Link 
     to={props.link}
-    style={{
-        background: `red`,
-        borderRadius: `85px`,
-        padding: `1rem`,
-        color: `white`
-    }}>
+    className={props.classes}>
     {props.linkText}
     </Link> 
 )
