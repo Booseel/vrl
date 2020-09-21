@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from "../common/button"
+import Card from "../common/card"
 
 const Price = (props) => (
     <section id={props.sectionId}>
@@ -37,6 +38,9 @@ const Price = (props) => (
                 <ul className="checkList">{props.checkList2}</ul>
                 <Button link="/" classes="button" linkText="В корзину" />
             </div>
+            <Card variant="basic" cardName="card1" title="3000" buttonVariant="one">
+                тут писать?
+            </Card>
         </div>
     </section>
 )

@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 //import Image from "../components/image"
 import SEO from "../components/seo"
 import Banner from "../components/banner"
+import Price from "../components/price"
 
 import Button from "../common/button"
 
@@ -113,6 +114,69 @@ const IndexPage = () => (
       </div>
     </section>
     <Banner />
+    <Price sectionId="price" priceHeader="Price"/>
+    <Price sectionId="price" priceHeader="Price"/>
+    <Banner />
+    <section id="portfolio">
+      <div className="section_header">
+        <h4>Работы автора курса</h4>
+      </div>
+      <div className="example">
+        <div className="example_item">
+          <div className="exampe_screen">
+            <img src="#"></img>
+          </div>
+          <h6 className="example_header">Маска "Фиолетовые облака"</h6>
+          <p className="example_description">Сделанная вручную маска,
+            которую сможет реализовать любой, кто пройдет курсы
+          </p>
+        </div>
+        <div className="example_item">
+          <div className="exampe_screen">
+            <img src="#"></img>
+          </div>
+          <h6 className="example_header">Evil Маска</h6>
+          <p className="example_description">Сделанная вручную маска,
+            которую сможет реализовать любой, кто пройдет курсы
+          </p>
+        </div>
+        <div className="example_item">
+          <div className="exampe_screen">
+            <img src="#"></img>
+          </div>
+          <h6 className="example_header">Маска Валькирии</h6>
+          <p className="example_description">Сделанная вручную маска,
+            которую сможет реализовать любой, кто пройдет курсы
+          </p>
+        </div>
+      </div>
+      <div className="offer">
+        <h5>Хотите научиться делать такие же замечательные маски?</h5>
+        <p>
+          Тогда вам точно подойдет мой комплексный курс,
+          который включает и "Маски для себя" и
+          "Профессиональный разработчик масок"
+        </p>
+        <Button link="#" classes="#" linkText="Купить комплексный курс" />
+      </div>
+    </section>
+    <section id="contact">
+      <div className="section_header">
+        <h4>Обратная связь</h4>
+      </div>
+      <div className="photo">
+        <img></img>
+        <h6>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut enim ad minim veniam, quis
+        </h6>
+        <p>Veca Rony, создатель курса</p>
+      </div>
+      <div className="contact">
+        FORM
+      </div>
+    </section>
   </Layout>
 )
 
