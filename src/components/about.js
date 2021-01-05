@@ -1,6 +1,6 @@
 import React from "react"
 
-const About = () => {
+const About = () => (
     <section id="about_courсe">
       <h4 className="section_header">Для кого эти курсы?</h4>
       <div className="about_content">
@@ -52,6 +52,6 @@ const About = () => {
         </div>
       </div>
     </section>
-}
+)
 
 export default About

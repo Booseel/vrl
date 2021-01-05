@@ -4,10 +4,10 @@ import Example from "../components/example"
 
 import Button from "../common/button"
 
-const Main = () => {
+const Main = () => (
     <section id="main" className="bg_gradient_primary">
       <div className="main_content">
-        <img src={require('../assets/img/head_tears.png')} className="main_head_tears" />
+        <img src={require('../assets/img/head_tears.png')} className="main_head_tears" alt="head tears" />
         <div className="blur main_content_wrapper">
           <div className="main_content__description">
             <h3>
@@ -22,8 +22,8 @@ const Main = () => {
         </div>
         <Example />
       </div>
-      <img className="cloud" src={require('../assets/img/cloud.png')} />
+      <img className="cloud" src={require('../assets/img/cloud.png')} alt="cloud" />
     </section>
-}
+)
 
 export default Main

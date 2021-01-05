@@ -4,7 +4,7 @@ import React from "react"
 const Menu = () => (
     <div className="menu flex flex_align_center">
         <div className="menu_logo">
-            <img src={require('../assets/img/logo.png')} />
+            <img src={require('../assets/img/logo.png')} alt="logo" />
         </div>
         <div className="menu_list flex spc-btwn">
         <Link

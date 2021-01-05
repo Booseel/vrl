@@ -1,6 +1,6 @@
 import React from "react"
 
-const Educate = () => {
+const Educate = () => (
     <section id="for_educate" className="flex column flex_align_center">
       <h4 className="section_header">Что потребуется для обучения?</h4>
       <div className="flex spc_arnd mb5">
@@ -45,8 +45,8 @@ const Educate = () => {
           </ul>
         </div>
       </div>
-      <img className="for_educate_cloud" src={require('../assets/img/cloud.png')} />
+      <img className="for_educate_cloud" src={require('../assets/img/cloud.png')} alt="cloud" />
     </section>
-}
+)
 
 export default Educate

@@ -1,7 +1,5 @@
 import React from 'react'
 
-import Button from "../common/button"
-
 const Card = ({cardName, cardDescription, currentPrice, lowerPrice, higherPrice, children}) => {
     return(
         <div className="card flex column flex_align_center spc-btwn blur">
