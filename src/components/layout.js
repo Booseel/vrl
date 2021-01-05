@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Menu from "./menu"
-//import Box from "../common/box"
+import Footer from "./footer"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -30,8 +30,8 @@ const Layout = ({ children }) => {
         <Menu />
       </header>
       <main>{children}</main>
-      <footer className="bg_gradient_primary">
-        <Menu />
+      <footer className="bg_gradient_secondary">        
+        <Footer />
       </footer>
     </>
   )
