@@ -34,7 +34,7 @@ const About = () => (
             <div className="about_text__header">
               <h4>Автор курса:</h4>
             </div>
-            <ul className="about_cource__list mb5">
+            <ul className="about_cource__list mb5 about_margin_mobile">
               <li className="about_cource__list_item">
                 <span>Профессиональный AR-разработчик масок для Инстаграмм</span>
               </li>

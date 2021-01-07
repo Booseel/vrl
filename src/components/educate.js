@@ -3,7 +3,7 @@ import React from "react"
 const Educate = () => (
     <section id="for_educate" className="flex column flex_align_center">
       <h4 className="section_header">Что потребуется для обучения?</h4>
-      <div className="flex spc_arnd mb5">
+      <div className="flex for_educate spc_arnd mb5">
         <div className="for_educate_card blur">
           <h4>Системные требования к ПК для установки программы Spark AR:</h4>
           <ul className="about_cource__list mb5">
