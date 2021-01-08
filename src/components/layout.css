@@ -855,6 +855,8 @@ pre tt:after {
 }
 
 .menu_list {
+  display: flex;
+  justify-content: space-between;
   width: 50rem;
 }
 
@@ -1383,20 +1385,50 @@ pre tt:after {
 }
 
 @media screen and (max-width: 1023px) {
-  .menu {
-    justify-content: space-between;
-    padding: 0 1rem;
-  }
-  .menu_list {
-    display: none;
+  .mb5 {
+    margin: 0;
+    padding-bottom: 5rem;
   }
 
-  .show {
-    display: block;
+  .menu {
+    justify-content: space-between;
+    margin: 0;
+    padding: 1rem;
+  }
+  .menu_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    color: #000;
+    font-weight: bold;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transition: all 0.5s;
+    transform: translateY(-100vh);
+  }
+  .menu_list__item {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  .menu_list.show {
+    transform: translateY(0vh);
   }
 
   .burger {
     display: block;
+    position: relative;
+    z-index: 99;
   }
   .burger i{
     display: block;
@@ -1468,6 +1500,9 @@ pre tt:after {
     display: none;
   }
 
+  #price {
+    background-attachment: fixed;
+  }
   .prices h4 {
     font-size: 3rem;
   }
@@ -1552,6 +1587,10 @@ pre tt:after {
 }
 
 @media screen and (max-width: 600px) {
+  .menu_list__item {
+    font-size: 2rem;
+  }
+
   .prices h4 {
     font-size: 2rem;
   }
@@ -1561,6 +1600,10 @@ pre tt:after {
 }
 
 @media screen and (max-width: 330px) {
+  .menu_list__item {
+    font-size: 1.5rem;
+  }
+
   .cardheader h3 {
     font-size: 1.5rem;
   }
