@@ -1125,6 +1125,14 @@ pre tt:after {
     width: 20rem;
     z-index: 1;
   }
+
+  #how_to_learn {
+    max-height: 55rem;
+  }
+
+  #for_educate {
+    max-height: 50rem;
+  }
 }
 
 @media screen and (max-width: 1700px) {
@@ -1166,6 +1174,10 @@ pre tt:after {
 
   #for_educate {
     max-height: 60rem;
+  }
+
+  #how_to_learn {
+    max-height: 50rem;
   }
 }
 
@@ -1228,6 +1240,10 @@ pre tt:after {
 }
 
 @media screen and (max-width: 1300px) {
+  #main {
+    height: 45rem;
+  }
+
   .button {
     font-size: 0.6rem;
     width: 15rem;
@@ -1281,16 +1297,21 @@ pre tt:after {
     transform: translateX(6rem) translateY(5rem);
   }
 
+  #for_educate {
+    max-height: 55rem;
+  }
   .for_educate_cloud {
     transform: translateY(-35rem) scale(1.5);
+  }
+  .for_educate_card {
+    width: 35vw;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  #main {
-    height: 45rem;
+  .menu_logo {
+    width: 13rem;
   }
-
   .menu_list__item {
     font-size: 1rem;
   }
@@ -1587,6 +1608,9 @@ pre tt:after {
 }
 
 @media screen and (max-width: 600px) {
+  .menu_logo {
+    width: 10rem;
+  }
   .menu_list__item {
     font-size: 2rem;
   }
