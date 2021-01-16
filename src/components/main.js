@@ -7,7 +7,7 @@ import Button from "../common/button"
 const Main = () => (
     <section id="main" className="bg_gradient_primary">
       <div className="main_content">
-        <img src={require('../assets/img/head_tears.png')} className="main_head_tears" alt="head tears" />
+        <img layout="fill" src='/head_tears.png' className="main_head_tears" alt="head tears" />
         <div className="blur main_content_wrapper">
           <div className="main_content__description">
             <h3>
@@ -22,7 +22,7 @@ const Main = () => (
         </div>
         <Example />
       </div>
-      <img className="cloud" src={require('../assets/img/cloud.png')} alt="cloud" />
+      <img className="cloud" src='/cloud.png' alt="cloud" />
     </section>
 )
 

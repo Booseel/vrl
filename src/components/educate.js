@@ -45,7 +45,7 @@ const Educate = () => (
           </ul>
         </div>
       </div>
-      <img className="for_educate_cloud" src={require('../assets/img/cloud.png')} alt="cloud" />
+      <img className="for_educate_cloud" src='/cloud.png' alt="cloud" />
     </section>
 )
 

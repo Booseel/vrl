@@ -1,7 +1,7 @@
 import React from "react"
 import Button from "../common/button"
 
-const Banner = () => (
+export const Banner = () => (
     <div className="banner flex flex_align_center spc_arnd bg_gradient_secondary">
         <div className="banner_text flex column">
             <h3>Стань AR-разработчиком с нуля до профи</h3>
@@ -10,5 +10,3 @@ const Banner = () => (
         <Button link="/" linkText="КУПИТЬ КУРС" classes="button secondary_button"/>
     </div>
 )
-
-export default Banner

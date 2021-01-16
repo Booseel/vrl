@@ -9,7 +9,7 @@ const Menu = () => {
     return (
     <div className="menu flex flex_align_center spc_arnd">
         <div className="menu_logo">
-            <img src={require('../assets/img/logo.png')} alt="logo" />
+            <img src='/logo.png' alt="logo" />
         </div>
         <div className="burger" onClick={() => setMenuActive(!menuActive)}>{menuActive ? 'Закрыть' : 'Меню'}</div>
         <MenuList  active={menuActive} setActive={setMenuActive}/>

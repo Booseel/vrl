@@ -6,7 +6,7 @@ const About = () => (
       <div className="about_content">
         <div className="about_line">
           <div className="about_picture">
-            <img src={require('../assets/img/about.jpg')} alt="about"/>
+            <img src='/about.jpg' alt="about"/>
           </div>
           <div className="about_text">
             <div className="about_text__header">
@@ -47,7 +47,7 @@ const About = () => (
             </ul>
           </div>
           <div className="about_picture">
-            <img src={require('../assets/img/about_author.jpg')} alt="about"/>
+            <img src='/about_author.jpg' alt="about"/>
           </div>
         </div>
       </div>

@@ -1,11 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
+import Link from 'next/link'
 
 const Button = (props) => (
-    <Link 
-    to={props.link}
-    className={props.classes}>
-    {props.linkText}
+    <Link href={props.link}>
+        <a className={props.classes}>{props.linkText}</a>
     </Link> 
 )
 
