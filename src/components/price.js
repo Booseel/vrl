@@ -3,9 +3,9 @@ import Button from "../common/button"
 import Card from "../common/card"
 
 const Price = (props) => (
-    <section id={props.sectionId}>
+    <section id="price">
         <h4 className="section_header">Выбери учебную программу</h4>
-        <div className="cards flex spc_arnd mb5">            
+        <div className="cards flex spc_arnd">            
             <Card variant="basic" cardName="Базовая" cardDescription="1 неделя" lowerPrice="5 000" currentPrice="5 000" higherPrice="7 500">
                 <ul className="about_cource__list flex column cardlist">
                     <li className="about_cource__list_item">

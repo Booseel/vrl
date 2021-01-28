@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 //import { useStaticQuery, graphql } from "gatsby"
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 import Menu from "./menu"
 import Footer from "./footer"
@@ -25,7 +26,7 @@ const Layout = ({ children }) => {
   `)*/
 
   return (
-    <>
+    <ParallaxProvider>
       <header className="header">
         <Menu />
       </header>
@@ -33,7 +34,7 @@ const Layout = ({ children }) => {
       <footer className="bg_gradient_secondary">        
         <Footer />
       </footer>
-    </>
+    </ParallaxProvider>
   )
 }
 

@@ -11,7 +11,7 @@ const Menu = () => {
         <div className="menu_logo">
             <img src='/logo.png' alt="logo" />
         </div>
-        <div className="burger" onClick={() => setMenuActive(!menuActive)}>{menuActive ? 'Закрыть' : 'Меню'}</div>
+        <div className="burger" onClick={() => setMenuActive(!menuActive)}>{menuActive ? <img src="/tiktok.svg"className="social_icon" /> : <img src="/telegram.svg"className="social_icon" />}</div>
         <MenuList  active={menuActive} setActive={setMenuActive}/>
     </div>
 )}

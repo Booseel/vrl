@@ -15,7 +15,7 @@ const IndexPage = () => (
     <Banner />
     <Learn />
     <Banner />
-    <Price sectionId="price" priceHeader="Price"/>
+    <Price />
     <Educate />
   </Layout>
 )

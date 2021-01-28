@@ -7,23 +7,17 @@ const MenuList = ({active, setActive}) => {
         <Link href="/#about_courсe">
             <a className="menu_list__item">О курсе</a>
         </Link>
-        <Link href="/#how_href_learn">
-            <a className="menu_list__item">Программа обучения</a>
+        <Link href="/#how_to_learn">
+            <a className="menu_list__item">Порядок обучения</a>
         </Link>
         <Link href="/#price">
             <a className="menu_list__item">Купить</a>
         </Link>
-        <Link
-            href="https://www.instagram.com/shrefries/highlights/18048682327257588/"
-            target="_blank"
-        >
-            <a className="menu_list__item">Работы автора</a>
+        <Link href="https://www.instagram.com/stories/highlights/18048682327257588/">
+            <a target="_blank" className="menu_list__item">Работы автора</a>
         </Link>
-        <Link
-            href="https://www.instagram.com/shrefries/highlights/18109290601115879/"
-            target="_blank"
-        >
-            <a className="menu_list__item">Отзывы</a>
+        <Link href="https://www.instagram.com/stories/highlights/18109290601115879/">
+            <a target="_blank" className="menu_list__item">Отзывы</a>
         </Link>
     </div>
     );

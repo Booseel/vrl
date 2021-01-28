@@ -619,6 +619,57 @@ pre tt:after {
 
 /* not default */
 
+/* animations */
+
+@keyframes main_head_tears {
+  from {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-40px) translateY(20px);
+  }
+  to {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes how_to_learn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes hands_ill {
+  from {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  to {
+    transform: translateX(-5px);
+  }
+}
+
+@keyframes buy_button_banner {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* styles */
+
 .wrapper {
   padding: 10rem 3rem 1rem;
 }
@@ -682,6 +733,14 @@ pre tt:after {
 
 .button:hover {
   box-shadow: none;
+}
+
+.banner_button {
+  animation: buy_button_banner 3s infinite ease-in-out;
+}
+
+.banner_button:hover {
+  animation: none;
 }
 
 .primary_button {
@@ -832,6 +891,10 @@ pre tt:after {
   width: 100vw;
 }
 
+.animation_head_tears {
+  animation: main_head_tears 5s infinite ease-in-out;
+}
+
 .main_head_tears {
   width: 20rem;
   transform: scaleX(-1) translateX(-34rem) translateY(0);
@@ -959,6 +1022,8 @@ pre tt:after {
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 15px;
+  animation: how_to_learn 1s ease-in;
+  animation-delay: 1s;
 }
 
 .how_to_learn_icon {
@@ -983,6 +1048,10 @@ pre tt:after {
   width: 50rem;
   margin-left: -50rem;
   transform: translateX(0) translateY(-5rem);
+}
+
+.animate_hands_ill {
+  animation: hands_ill 2s infinite linear;
 }
 
 .cloud_ill {
@@ -1035,6 +1104,7 @@ pre tt:after {
 
 .cards {
   width: 100%;
+  padding-bottom: 5rem;
 }
 
 .cardheader {
@@ -1103,6 +1173,12 @@ pre tt:after {
 }
 
 /* media quires */
+
+@media screen and (min-width: 1920px) {
+  #price {
+    background-size: cover;
+  }
+}
 
 @media screen and (max-width: 1800px) {
   .cloud {
@@ -1237,6 +1313,9 @@ pre tt:after {
     font-size: 0.8rem;
     line-height: 1rem;
   }
+  .head_ill {
+    width: 60rem;
+  }
 }
 
 @media screen and (max-width: 1300px) {
@@ -1280,21 +1359,19 @@ pre tt:after {
   .about_picture img {
     width: 60vw;
   }
-
-  #how_to_learn {
-    max-height: 55rem;
-  }
   .cloud_ill {
     transform: translateY(-35rem);
   }
   .head_ill {
-    width: 50rem;
-    transform: translateY(0rem) translateX(-5rem);
+    transform: translateY(-10rem) translateX(-5rem);
   }
   .hands_ill {
     width: 50rem;
     margin-left: -50rem;
-    transform: translateX(6rem) translateY(5rem);
+    transform: translateX(0) translateY(-10rem);
+  }
+  .cloud_ill {
+    transform: translateY(-55rem);
   }
 
   #for_educate {
@@ -1380,21 +1457,18 @@ pre tt:after {
     height: 45vh;
   }
 
-  #how_to_learn {
-    max-height: 45rem;
-  }
   .illustration {
     display: inline;
   }
   .cloud_ill {
-    transform: translateY(-30rem);
+    transform: translateY(-90rem);
   }
   .head_ill {
     width: 50rem;
-    transform: translateY(0rem) translateX(0rem);
+    transform: translateY(-5rem) translateX(0rem);
   }
   .hands_ill {
-    transform: translateX(15rem) translateY(2rem);
+    transform: translateX(45rem) translateY(-50rem);
   }
 
   .prices {
@@ -1438,8 +1512,11 @@ pre tt:after {
     transform: translateY(-100vh);
   }
   .menu_list__item {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 600;
+    background: linear-gradient(45deg, #00D1FF 20%, #FF47D7 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .menu_list.show {
@@ -1497,6 +1574,7 @@ pre tt:after {
   }
   .about_text {
     width: 100%;
+    margin-top: 1rem;
   }
   .about_margin_mobile {
     margin-bottom: 1rem;
