@@ -1,12 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Link from 'next/link'
+
 import Button from "../common/button"
 import Card from "../common/card"
+import Modal from '../common/modal'
+import Form from '../common/form'
 
-const Price = (props) => (
+const Price = (props) => {
+    const [ modalActive, setModalActive ] = useState(false)
+    return (
     <section id="price">
+        <Modal active={modalActive} setActive={setModalActive}>
+            <h3 className="modal_header">Базовая</h3>
+            <div className="modal_price">
+                <h5>5 000р</h5>
+            </div>
+            <p className="modal_info">Введите данные для регистрации личного кабинета на платформе обучения</p>
+            <Form actionForm="/">
+                <p className="modal_info">На ваш email будет выслано письмо ссылкой для входа в личный кабинет после оплаты</p>
+                <div className="flex align_center modal_checkbox">                
+                    <input type="checkbox" id="check" className="checkbox" required/>
+                    <label htmlFor="check">
+                        <Link href="/#for_educate">
+                            <a className="modal_requirement">
+                                я ознакомился/лась с требованиями для обучения
+                            </a>
+                        </Link>
+                    </label>
+                </div>
+            </Form>
+            <Button linkText="ОПЛАТИТЬ" link="/" classes="button form_button">
+                <div className="modal_button">ОПЛАТИТЬ</div>
+            </Button>
+        </Modal>
         <h4 className="section_header">Выбери учебную программу</h4>
         <div className="cards flex spc_arnd">            
-            <Card variant="basic" cardName="Базовая" cardDescription="1 неделя" lowerPrice="5 000" currentPrice="5 000" higherPrice="7 500">
+            <Card cardId="basic" variant="basic" cardName="Базовая" cardDescription="1 неделя" lowerPrice="5 000" currentPrice="5 000" higherPrice="7 500">
                 <ul className="about_cource__list flex column cardlist">
                     <li className="about_cource__list_item">
                         <span>Загрузка и установка программы, знакомство с интерфейсом</span>
@@ -36,9 +65,9 @@ const Price = (props) => (
                         <span>Публикация маски</span>
                     </li>
                 </ul>
-                <Button link="/" classes="button primary_button" linkText="КУПИТЬ" />
+                <div className="button primary_button" onClick={() => setModalActive(true)}>КУПИТЬ</div>
             </Card>
-            <Card variant="basic" cardName="Продвинутая" cardDescription="2 недели" lowerPrice="10 000" currentPrice="10 000" higherPrice="16 500" buttonVariant="one">
+            <Card cardId="advanced" variant="basic" cardName="Продвинутая" cardDescription="2 недели" lowerPrice="10 000" currentPrice="10 000" higherPrice="16 500" buttonVariant="one">
                 <ul className="about_cource__list flex column cardlist">
                     <li className="about_cource__list_item">
                         <span>Замена фона</span>
@@ -82,7 +111,7 @@ const Price = (props) => (
                 </ul>
                 <Button link="/" classes="button primary_button" linkText="КУПИТЬ" />
             </Card>
-            <Card variant="basic" cardName="Полная" cardDescription="4 недели" lowerPrice="15 000" currentPrice="15 000" higherPrice="22 500" buttonVariant="one">
+            <Card cardId="full" variant="basic" cardName="Полная" cardDescription="4 недели" lowerPrice="15 000" currentPrice="15 000" higherPrice="22 500" buttonVariant="one">
                <ul className="about_cource__list flex column cardlist">
                     <li className="about_cource__list_item card_full">
                         <span>Базовая + Продвинутая</span>
@@ -116,6 +145,7 @@ const Price = (props) => (
             </Card>
         </div>
     </section>
-)
+    );
+}
 
 export default Price

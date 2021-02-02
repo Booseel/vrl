@@ -16,52 +16,47 @@ const Learn = () => (
         <div className="how_to_learn flex column flex_align_center">
           <ScrollAnimation
             animateIn="fadeInDown"
-            animateOnce="true" 
+            animateOnce={true}
             className="how_to_learn_part blur flex flex_align_center">
             <img src='/pay.png' className="how_to_learn_icon" alt="pay" />
             <div className="learn_description">
-              <h6>Оплата</h6>
-              <p>Лёгкая online-оплата</p>
+              <p>Лёгкая оплата на сайте и возможность рассрочки</p>
             </div>
           </ScrollAnimation>        
           <ScrollAnimation
             animateIn="fadeInDown"
-            animateOnce="true"
+            animateOnce={true}
             className="how_to_learn_part blur flex flex_align_center">
             <img src='/login.png' className="how_to_learn_icon" alt="login" />
             <div className="learn_description">
-              <h6>Доступ к личному кабинету на платформе обучения</h6>
-              <p>Ваш личный кабинет с доступом к урокам и домашним заданиям</p>
+              <p>Удобный личный кабинет с доступом к урокам, необходимым документам, заданиям и обратной связи</p>
             </div>
           </ScrollAnimation>          
           <ScrollAnimation
             animateIn="fadeInDown"
-            animateOnce="true"
+            animateOnce={true}
             className="how_to_learn_part blur flex flex_align_center">
             <img src='/education.png' className="how_to_learn_icon" alt="education" />
-            <div className="learn_description">              
-              <h6>Обучение</h6>
-              <p>В online-формате каждый день с автором курса и сокурсниками</p>
+            <div className="learn_description">
+              <p>Обучение в online-формате, чат с однокурсниками и автором курса в ежедневном доступе</p>
             </div>
           </ScrollAnimation>
           <ScrollAnimation
             animateIn="fadeInDown"
-            animateOnce="true"
+            animateOnce={true}
             className="how_to_learn_part blur flex flex_align_center">
             <img src='/user.png' className="how_to_learn_icon" alt="user" />
-            <div className="learn_description">              
-              <h6>Прямые эфиры от Автора курса</h6>
-              <p>Много полезной информации из личного опыта</p>
+            <div className="learn_description">
+              <p>Профессия будущего с нуля во всех деталях с опытом из личной практики автора курса</p>
             </div>
           </ScrollAnimation>
           <ScrollAnimation
             animateIn="fadeInDown"
-            animateOnce="true"
+            animateOnce={true}
             className="how_to_learn_part blur flex flex_align_center">
             <img src='/gift.png' className="how_to_learn_icon" alt="gift" />
-            <div className="learn_description">                
-              <h6>Приз от Автора курса!</h6>
-              <p>Вы получаете не только новый опыт, знания и профессию, но и ПРИЗ за самую лучшую маску!</p>
+            <div className="learn_description">     
+              <p>Приз за самый лучший проект среди учеников!</p>
             </div>
           </ScrollAnimation>
         </div>

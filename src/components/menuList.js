@@ -5,7 +5,7 @@ const MenuList = ({active, setActive}) => {
     return (
         <div className={active ? 'menu_list show' : 'menu_list'}>
         <Link href="/#about_courсe">
-            <a className="menu_list__item">О курсе</a>
+            <a target="_blank" className="menu_list__item">О курсе</a>
         </Link>
         <Link href="/#how_to_learn">
             <a className="menu_list__item">Порядок обучения</a>

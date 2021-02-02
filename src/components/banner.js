@@ -7,6 +7,6 @@ export const Banner = () => (
             <h3>Стань AR-разработчиком с нуля до профи</h3>
             <p>Пройди полный курс и выйди на большой доход!</p>
         </div>
-        <Button link="/" linkText="КУПИТЬ КУРС" classes="button secondary_button banner_button"/>
+        <Button link="/#price" linkText="КУПИТЬ КУРС" classes="button secondary_button banner_button"/>
     </div>
 )

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Card = ({cardName, cardDescription, currentPrice, lowerPrice, higherPrice, children}) => {
+const Card = ({cardId, cardName, cardDescription, currentPrice, lowerPrice, higherPrice, children}) => {
     return(
-        <div className="card flex column flex_align_center spc-btwn blur">
+        <div id={cardId} className="card flex column flex_align_center spc-btwn blur">
             <div className="cardheader">
                 <h3>{cardName}</h3>
                 <div className="prices flex flex_align_center spc_arnd">
@@ -14,7 +14,7 @@ const Card = ({cardName, cardDescription, currentPrice, lowerPrice, higherPrice,
             </div>
             {children}
         </div>
-    )
+    );
 }
 
 export default Card

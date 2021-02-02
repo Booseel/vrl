@@ -4,7 +4,7 @@ import { Parallax } from 'react-scroll-parallax';
 
 import Example from "../components/example"
 
-import Button from "../common/button"
+import Button from '../common/button'
 
 const Main = () => (
     <section id="main" className="bg_gradient_primary">
@@ -21,13 +21,13 @@ const Main = () => (
               Комплексный курс включает в себя несколько небольших курсов и 
               позволяет полностью освоить новую для себя профессию
             </p>
-            <Button link="/" linkText="КУПИТЬ КУРС" classes="button primary_button"/>
+            <Button link="/#price" linkText="КУПИТЬ КУРС" classes="button primary_button"/>
           </div>
         </div>
         <Example />
       </div>
       <div className="cloud">
-        <Parallax y={[-5, 30]}>
+        <Parallax y={[-50, 30]}>
           <img src='/cloud.png' alt="cloud" />
         </Parallax>
       </div>
