@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Button from "../common/button"
 import Card from "../common/card"
 import Modal from '../common/modal'
-import Form from '../common/form'
+import SignUp from '../common/form'
 
 const Price = (props) => {
     const [ modalActive, setModalActive ] = useState(false)
@@ -16,22 +16,7 @@ const Price = (props) => {
                 <h5>5 000р</h5>
             </div>
             <p className="modal_info">Введите данные для регистрации личного кабинета на платформе обучения</p>
-            <Form actionForm="/">
-                <p className="modal_info">На ваш email будет выслано письмо ссылкой для входа в личный кабинет после оплаты</p>
-                <div className="flex align_center modal_checkbox">                
-                    <input type="checkbox" id="check" className="checkbox" required/>
-                    <label htmlFor="check">
-                        <Link href="/#for_educate">
-                            <a className="modal_requirement">
-                                я ознакомился/лась с требованиями для обучения
-                            </a>
-                        </Link>
-                    </label>
-                </div>
-            </Form>
-            <Button linkText="ОПЛАТИТЬ" link="/" classes="button form_button">
-                <div className="modal_button">ОПЛАТИТЬ</div>
-            </Button>
+            <SignUp onClickRequirements={setModalActive}/>
         </Modal>
         <h4 className="section_header">Выбери учебную программу</h4>
         <div className="cards flex spc_arnd">            

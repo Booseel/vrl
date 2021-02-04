@@ -828,10 +828,13 @@ input[type="checkbox"]:checked + label:after{
   border: 2px solid #fff;
   position: absolute;
   bottom: 3rem;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .form_button:hover {
   box-shadow: -2px 10px 50px 4px rgba( 255, 255, 255, 0.5 );
+  cursor: not-allowed;
 }
 
 .burger {
@@ -1093,6 +1096,8 @@ input[type="checkbox"]:checked + label:after{
 }
 
 .modal_button {
+  position: relative;
+  z-index: 99;
   display: none;
 }
 
@@ -1106,6 +1111,7 @@ input[type="checkbox"]:checked + label:after{
   position: absolute;
   top: 0;
   left: 0;
+  border: none;
   border-radius: 2rem;
   background: linear-gradient(45deg, #00D1FF 20%, #FF47D7 80%);
     -webkit-background-clip: text;
@@ -1114,6 +1120,8 @@ input[type="checkbox"]:checked + label:after{
 }
 
 .form_button.active {
+  cursor: pointer;
+  pointer-events: all;
   background-color: #fff;
 }
 
