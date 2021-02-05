@@ -37,9 +37,6 @@ const Price = () => {
     };
     
     const [ modalActive, setModalActive ] = useState(false)
-    const basicPrice = 5000;
-    const advancedPrice = 10000;
-    const fullPrice = 15000;
 
     return (
         <section id="price">
@@ -78,7 +75,7 @@ const Price = () => {
                             <span>Публикация маски</span>
                         </li>
                     </ul>
-                    <div className="button primary_button" onClick={() => openModal(cardKeys.basic, cardNames.basic, basicPrice)}>КУПИТЬ</div>
+                    <div className="button primary_button" onClick={() => openModal(cardKeys.basic, cardNames.basic, currentPrices.basic)}>КУПИТЬ</div>
                 </Card>
                 <Card cardId={cardKeys.advanced} variant="basic" cardName={cardNames.advanced} cardDescription="2 недели" lowerPrice="10 000" currentPrice={currentPrices.advanced} higherPrice="16 500" buttonVariant="one">
                     <ul className="about_cource__list flex column cardlist">
@@ -122,7 +119,7 @@ const Price = () => {
                             <span>Смазанное движение</span>
                         </li>
                     </ul>
-                    <div className="button primary_button" onClick={() => openModal(cardKeys.advanced, cardNames.advanced, advancedPrice)}>КУПИТЬ</div>
+                    <div className="button primary_button" onClick={() => openModal(cardKeys.advanced, cardNames.advanced, currentPrices.advanced)}>КУПИТЬ</div>
                 </Card>
                 <Card cardId={cardKeys.full} variant="basic" cardName={cardNames.full} cardDescription="4 недели" lowerPrice="15 000" currentPrice={currentPrices.full} higherPrice="22 500" buttonVariant="one">
                 <ul className="about_cource__list flex column cardlist">
@@ -154,7 +151,7 @@ const Price = () => {
                             <span>Игры</span>
                         </li>
                     </ul>
-                    <div className="button primary_button" onClick={() => openModal(cardKeys.full, cardNames.full, fullPrice)}>КУПИТЬ</div>
+                    <div className="button primary_button" onClick={() => openModal(cardKeys.full, cardNames.full, currentPrices.full)}>КУПИТЬ</div>
                 </Card>
             </div>
         </section>
