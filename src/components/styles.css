@@ -1096,6 +1096,7 @@ input[type="checkbox"]:checked + label:after{
 }
 
 .modal_button {
+  cursor: pointer;
   position: relative;
   z-index: 99;
   display: none;
