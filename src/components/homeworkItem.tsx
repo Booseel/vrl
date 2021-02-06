@@ -1,6 +1,10 @@
-import React, { Children } from 'react'
+import React from 'react'
 
-const HomeworkItem = ({children}) => {
+interface Item {
+    children?: any,
+}
+
+const HomeworkItem: React.FC<Item> = ({children}) => {
     return (
         <div className="homework_item">
             <img src='/ahsoka.jpg' alt="homework image" className="homework_img"/>

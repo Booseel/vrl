@@ -46,6 +46,9 @@ const Educate = () => (
                 <span>Аккаунт в Telegram для доступа к чату курса</span>
             </li>
             <li className="about_cource__list_item">
+                <span>Аккаунт Google (Gmail)</span>
+            </li>
+            <li className="about_cource__list_item">
                 <span>Любая программа для работы с 3D объектами (для Полной учебной программы)</span>
             </li>
           </ul>

@@ -32,7 +32,7 @@ const About = () => (
             </div>
           </div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeIn" animateOnce="true">
+        <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
           <div className="about_line">
             <div className="about_text">
               <div className="about_text__header">

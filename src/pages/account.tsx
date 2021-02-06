@@ -7,7 +7,7 @@ import Homework from '../components/homework'
 const accountPage = () => {
     return (
         <LkLayout id="account">             
-            <Lessons />
+            <Homework />
         </LkLayout>
     );
 }

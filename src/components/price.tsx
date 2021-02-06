@@ -33,7 +33,6 @@ const Price = () => {
         cardNameModal = setCardNameModal(cardNameModal);
         cardPriceModal = setCardPriceModal(cardPriceModal);
         cardKeyModal = setCardKeyModal(cardKeyModal);
-        return (cardKeyModal, cardNameModal, cardPriceModal);
     };
     
     const [ modalActive, setModalActive ] = useState(false)
@@ -41,11 +40,11 @@ const Price = () => {
     return (
         <section id="price">
             <Modal modalId={cardKeyModal} active={modalActive} setActive={setModalActive} modalHeader={cardNameModal} modalPrice={cardPriceModal}>
-                <SignUp onClickRequirements={() => setModalActive(false)}/>
+                <SignUp onRequirements={() => setModalActive(false)}/>
             </Modal>
             <h4 className="section_header">Выбери учебную программу</h4>
             <div className="cards flex spc_arnd">            
-                <Card cardId={cardKeys.basic} variant="basic" cardName={cardNames.basic} cardDescription="1 неделя" lowerPrice="5 000" currentPrice={currentPrices.basic} higherPrice="7 500">
+                <Card cardId={cardKeys.basic} cardName={cardNames.basic} cardDescription="1 неделя" lowerPrice="5 000" currentPrice={currentPrices.basic} higherPrice="7 500">
                     <ul className="about_cource__list flex column cardlist">
                         <li className="about_cource__list_item">
                             <span>Загрузка и установка программы, знакомство с интерфейсом</span>
@@ -77,7 +76,7 @@ const Price = () => {
                     </ul>
                     <div className="button primary_button" onClick={() => openModal(cardKeys.basic, cardNames.basic, currentPrices.basic)}>КУПИТЬ</div>
                 </Card>
-                <Card cardId={cardKeys.advanced} variant="basic" cardName={cardNames.advanced} cardDescription="2 недели" lowerPrice="10 000" currentPrice={currentPrices.advanced} higherPrice="16 500" buttonVariant="one">
+                <Card cardId={cardKeys.advanced} cardName={cardNames.advanced} cardDescription="2 недели" lowerPrice="10 000" currentPrice={currentPrices.advanced} higherPrice="16 500">
                     <ul className="about_cource__list flex column cardlist">
                         <li className="about_cource__list_item">
                             <span>Замена фона</span>
@@ -121,7 +120,7 @@ const Price = () => {
                     </ul>
                     <div className="button primary_button" onClick={() => openModal(cardKeys.advanced, cardNames.advanced, currentPrices.advanced)}>КУПИТЬ</div>
                 </Card>
-                <Card cardId={cardKeys.full} variant="basic" cardName={cardNames.full} cardDescription="4 недели" lowerPrice="15 000" currentPrice={currentPrices.full} higherPrice="22 500" buttonVariant="one">
+                <Card cardId={cardKeys.full} cardName={cardNames.full} cardDescription="4 недели" lowerPrice="15 000" currentPrice={currentPrices.full} higherPrice="22 500">
                 <ul className="about_cource__list flex column cardlist">
                         <li className="about_cource__list_item card_full">
                             <span>Базовая + Продвинутая</span>

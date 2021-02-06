@@ -4,7 +4,7 @@ import MenuList from './menuList'
 
 const Menu = () => {
 
-    const [menuActive, setMenuActive] = useState(false)
+    const [menuActive, setMenuActive] = useState(false);
     
     return (
     <div className="menu flex flex_align_center spc_arnd">
@@ -12,7 +12,7 @@ const Menu = () => {
             <img src='/logo.png' alt="logo" />
         </div>
         <div className="burger" onClick={() => setMenuActive(!menuActive)}>{menuActive ? <img src="/tiktok.svg"className="social_icon" /> : <img src="/telegram.svg"className="social_icon" />}</div>
-        <MenuList  active={menuActive} setActive={setMenuActive}/>
+        <MenuList active={menuActive} setActive={setMenuActive}/>
     </div>
 )}
 

@@ -125,6 +125,11 @@ optgroup {
   font-weight: 700;
 }
 button,
+button:active,
+button:focus {
+  outline: none;
+}
+button,
 input {
   overflow: visible;
 }
@@ -736,6 +741,31 @@ input[type="checkbox"]:checked + label:after{
 
 /* styles */
 
+.notFound {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notFound_link {
+  background: linear-gradient(45deg, #00D1FF 20%, #FF47D7 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.notFound_link:hover {
+  background: linear-gradient(-45deg, #00D1FF 20%, #FF47D7 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 .wrapper {
   padding: 10rem 3rem 1rem;
@@ -1010,7 +1040,7 @@ input[type="checkbox"]:checked + label:after{
   position: relative;
   padding: 1rem;
   width: 50vw;
-  height: 65%;
+  height: 75%;
   border-radius: 2rem;
   display: flex;
   flex-direction: column;
@@ -1456,6 +1486,10 @@ input[type="checkbox"]:checked + label:after{
 }
 
 @media screen and (max-width: 1600px) {
+  .modal {
+    height: 80%;
+  }
+
   .section_header {
     margin: 0;
   }
@@ -1508,6 +1542,19 @@ input[type="checkbox"]:checked + label:after{
 }
 
 @media screen and (max-width: 1400px) {
+  .modal {
+    height: 90%;
+  }
+  .modal_form {
+    text-align: center;
+  }
+  .modal_info {
+    margin-top: 0.5rem;
+  }
+  .modal_inputs {
+    font-size: 1.5rem;
+  }
+  
   section {
     min-height: 0;
   }
@@ -1543,6 +1590,13 @@ input[type="checkbox"]:checked + label:after{
 }
 
 @media screen and (max-width: 1300px) {
+  .modal_info {
+    font-size: 0.8rem;
+  }
+  .modal_inputs {
+    font-size: 1rem;
+  }
+
   #main {
     height: 45rem;
   }
@@ -1610,6 +1664,19 @@ input[type="checkbox"]:checked + label:after{
 }
 
 @media screen and (max-width: 1200px) {
+  .modal_price {
+    top: 4rem;
+  }
+  .modal_price h5{
+    font-size: 1rem;
+  }
+  .modal_info {
+    margin-top: 0;
+  }
+  .modal_form {
+    margin-top: 2rem;
+  }
+
   .modal_inputs, .modal_header {
     font-size: 1rem;
   }
@@ -1632,7 +1699,7 @@ input[type="checkbox"]:checked + label:after{
     transform: translateX(10rem) translateY(-15rem);
   }
   .cloud {
-    transform: translateY(-90rem);
+    transform: translateY(-85rem);
     width: 100vw;
   }
   .main_content_wrapper {
@@ -1707,7 +1774,20 @@ input[type="checkbox"]:checked + label:after{
   }
 }
 
+@media screen and (max-width: 1030px) {
+  .cloud_ill {
+    transform: translateY(-80rem);
+  }
+  .illustration {    
+    transform: translateY(2rem);
+  }
+}
+
 @media screen and (max-width: 1023px) {
+  .modal {
+    width: 90vw;
+  }
+
   .mb5 {
     margin: 0;
     padding-bottom: 5rem;
@@ -1741,6 +1821,7 @@ input[type="checkbox"]:checked + label:after{
   }
   .menu_list__item {
     font-size: 2rem;
+    line-height: 3rem;
     font-weight: 600;
     background: linear-gradient(45deg, #00D1FF 20%, #FF47D7 80%);
     background-clip: text;
@@ -1876,9 +1957,6 @@ input[type="checkbox"]:checked + label:after{
 }
 
 @media screen and (max-width: 700px) {
-  .modal {
-    width: 90vw;
-  }
   .modal_inputs, .modal_header {
     font-size: 2rem;
   }
@@ -1897,6 +1975,9 @@ input[type="checkbox"]:checked + label:after{
   }
   .main_content_wrapper {
     padding: 2rem 2rem 3rem 2rem;
+  }
+  .exampleWapper {
+    transform: translateX(-4rem) translateY(0rem);
   }
 
   .about_text {
@@ -1924,6 +2005,19 @@ input[type="checkbox"]:checked + label:after{
   .modal_inputs, .modal_header {
     font-size: 1.5rem;
   }
+  .modal_requirement {
+    font-size: 0.8rem;
+    font-weight: normal;
+  }
+  .modal_header {
+    top: 0.5rem;
+  }
+  .modal_price {
+    top: 2.5rem;
+  }
+  .form_button {
+    bottom: 0.5rem;
+  }
 
   .menu_logo {
     width: 10rem;
@@ -1940,9 +2034,26 @@ input[type="checkbox"]:checked + label:after{
   }
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 425px) {
   .modal {
     width: 100vw;
+  }
+  .exampleWapper {
+    transform: translateX(-4.5rem) translateY(0rem);
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .exampleWapper {
+    transform: translateX(-4.5rem) translateY(-2.5rem);;
+  }
+
+  .modal {
+    height: 100%;
+    padding: 0;
+  }
+  .modal_form {
+    height: 50%;
   }
 
   .menu_list__item {
@@ -1951,6 +2062,12 @@ input[type="checkbox"]:checked + label:after{
 
   .cardheader h3 {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .modal_form {
+    height: 55%;
   }
 }
 

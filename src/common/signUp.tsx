@@ -3,10 +3,16 @@ import Link from 'next/link'
 import { Formik, Field, Form } from 'formik'
 
 import Button from "../common/button"
+import { any } from 'prop-types';
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-const SignUp = ({id, onClickRequirements}) => {
+interface signUp {
+    id?: any,
+    onRequirements?: any,
+};
+
+const SignUp: React.FC<signUp> = ({id, onRequirements}) => {
     return (
         <Formik
             initialValues={{ email: '', password: '', checkbox: false, }}
@@ -16,9 +22,9 @@ const SignUp = ({id, onClickRequirements}) => {
                 if (!values.email) {
                     errors.email = 'Поле обязательно для ввода';
                 } else if (
-                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email) 
+                    !/^[A-Z0-9._%+-]+@gmail+\.[com]{2,}$/i.test(values.email) 
                 ) {
-                    errors.email = 'Некорректный email';
+                    errors.email = 'Некорректный email, используйте Gmail';
                 } 
                 if (!values.password) {
                     errors.password = 'Поле обязательно для ввода';
@@ -94,7 +100,7 @@ const SignUp = ({id, onClickRequirements}) => {
                         />
                         <label htmlFor="check">
                             <Link href="/#for_educate">
-                                <a className="modal_requirement" onClick={onClickRequirements}>
+                                <a className="modal_requirement" onClick={onRequirements}>
                                     я ознакомился/лась с требованиями для обучения
                                 </a>
                             </Link>

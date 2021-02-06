@@ -7,7 +7,7 @@ import Lessons from '../components/lessons'
 const AdminPage = () => {
     return (
         <LkLayout id="admin">
-            <Revview />
+            <Lessons />
         </LkLayout>
     );
 }
