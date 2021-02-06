@@ -1013,7 +1013,7 @@ input[type="checkbox"]:checked + label:after{
 }
 
 .wrapper_modal {
-  background-color: rgba(59, 59, 59, 0.4);
+  background-color: rgba(69,25,83, 0.4);
   color: #fff;
   position: fixed;
   top: 0;
@@ -1053,11 +1053,15 @@ input[type="checkbox"]:checked + label:after{
 
 .close_modal {
   position: absolute;
-  top: 0.5rem;
+  top: 1rem;
   right: 1rem;
   font-size: 1rem;
   cursor: pointer;
   transition: 0.25s all;
+}
+
+.modal_icon {
+  width: 1rem;
 }
 
 .close_modal:hover {
@@ -1811,7 +1815,7 @@ input[type="checkbox"]:checked + label:after{
     height: 100vh;
     color: #000;
     font-weight: bold;
-    background: rgba( 255, 255, 255, 0.25 );
+    background: rgba(69,25,83, 0.4);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 20px );
     -webkit-backdrop-filter: blur( 20px );
@@ -1823,9 +1827,7 @@ input[type="checkbox"]:checked + label:after{
     font-size: 2rem;
     line-height: 3rem;
     font-weight: 600;
-    background: linear-gradient(45deg, #00D1FF 20%, #FF47D7 80%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #fff;
   }
 
   .menu_list.show {

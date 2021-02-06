@@ -70,7 +70,7 @@ const SignUp: React.FC<signUp> = ({id, onRequirements}) => {
                 <Form id={id} action="POST" onSubmit={handleSubmit} className="modal_form">
                     <input 
                         className="modal_inputs" 
-                        placeholder="email" 
+                        placeholder="Gmail" 
                         name="email" 
                         type="email"                         
                         onChange={handleChange}
@@ -88,7 +88,7 @@ const SignUp: React.FC<signUp> = ({id, onRequirements}) => {
                         value={values.password}
                     />
                     {errors.password && touched.password && errors.password}
-                    <p className="modal_info">На ваш email будет выслано письмо ссылкой для входа в личный кабинет после оплаты</p>
+                    <p className="modal_info">На ваш Gmail будет выслано письмо ссылкой для входа в личный кабинет после оплаты</p>
                     <div className="flex align_center modal_checkbox">                
                         <Field 
                             type="checkbox" 
