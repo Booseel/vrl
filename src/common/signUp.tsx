@@ -17,7 +17,7 @@ const SignUp: React.FC<signUp> = ({id, onRequirements}) => {
             initialValues={{ email: '', password: '', checkbox: false, }}
             validateOnMount={true}
             validate={values => {
-            let errors = {};
+            let errors: any = {};
                 if (!values.email) {
                     errors.email = 'Поле обязательно для ввода';
                 } else if (
