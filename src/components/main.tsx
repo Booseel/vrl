@@ -10,7 +10,7 @@ export const Main = () => (
     <section id="main" className="bg_gradient_primary">
       <div className="main_content">
         <div className="main_head_tears">
-          <img className="animation_head_tears" layout="fill" src='/head_tears.png' alt="head tears" />
+          <img className="animation_head_tears" src='/head_tears.png' alt="head tears" />
         </div>
         <div className="blur main_content_wrapper">
           <div className="main_content__description">
