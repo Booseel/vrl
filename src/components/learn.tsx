@@ -62,7 +62,7 @@ const Learn = () => (
         </div>
       </div>
       <div className="cloud_ill">
-        <Parallax y={[-20, 5]}>          
+        <Parallax y={[-15, 5]}>          
           <img src='/cloud.png' alt="cloud ill" />
         </Parallax>
       </div>

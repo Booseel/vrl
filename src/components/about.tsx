@@ -13,11 +13,11 @@ const About = () => (
             </div>
             <div className="about_text">
               <div className="about_text__header">
-                <h4>Курсы подойдут тем, кто:</h4>
+                <h4>Курсы подойдут тем, кто хочет:</h4>
               </div>
               <ul className="about_cource__list">
                 <li className="about_cource__list_item">
-                  <span>Хочет освоить современную профессию</span>
+                  <span>Освоить современную профессию</span>
                 </li>
                 <li className="about_cource__list_item">
                   <span>Расширить спектр своих услуг</span>

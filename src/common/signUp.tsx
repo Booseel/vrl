@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { Formik, Field, Form } from 'formik'
 
 import Button from "../common/button"
-import { any } from 'prop-types';
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 

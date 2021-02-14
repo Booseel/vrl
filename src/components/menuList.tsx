@@ -4,8 +4,8 @@ import Link from 'next/link'
 const MenuList = ({active, setActive}) => {
     return (
         <div className={active ? 'menu_list show' : 'menu_list'}>
-            <Link href="/#about_courсe">
-                <a className="menu_list__item" onClick={() => setActive(false)}>О курсе</a>
+            <Link href="/#author">
+                <a className="menu_list__item" onClick={() => setActive(false)}>Об авторе</a>
             </Link>
             <Link href="/#how_to_learn">
                 <a className="menu_list__item" onClick={() => setActive(false)}>Порядок обучения</a>

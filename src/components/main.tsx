@@ -6,7 +6,7 @@ import Example from "../components/example"
 
 import Button from '../common/button'
 
-const Main = () => (
+export const Main = () => (
     <section id="main" className="bg_gradient_primary">
       <div className="main_content">
         <div className="main_head_tears">
@@ -24,14 +24,12 @@ const Main = () => (
             <Button link="/#price" linkText="КУПИТЬ КУРС" classes="button primary_button"/>
           </div>
         </div>
-        <Example />
+        <Example wrapperClass="exampleMain" seWrapperClass="seMain" twelveWrapperClass="twelveMain" contentSE='/evil.gif' contentX='/valkiria.gif' />
       </div>
       <div className="cloud">
-        <Parallax y={[-50, 30]}>
+        <Parallax y={[-40, 30]}>
           <img src='/cloud.png' alt="cloud" />
         </Parallax>
       </div>
     </section>
 )
-
-export default Main
